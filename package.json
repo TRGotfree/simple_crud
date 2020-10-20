@@ -1,0 +1,30 @@
+{
+  "name": "simple_crud",
+  "version": "0.0.1",
+  "description": "Test task",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TRGotfree/simple_crud.git"
+  },
+  "keywords": [
+    "test",
+    "task",
+    "crud",
+    "blog"
+  ],
+  "author": "Timur Gazaleyev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TRGotfree/simple_crud/issues"
+  },
+  "homepage": "https://github.com/TRGotfree/simple_crud#readme",
+  "dependencies": {
+    "config": "^3.3.2",
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
+  }
+}
