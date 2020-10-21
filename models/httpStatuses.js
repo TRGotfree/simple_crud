@@ -4,4 +4,9 @@ const NOT_AUTHORIZED = 401;
 const OK = 200;
 const NO_CONTENT = 201;
 
-module.exports = { BAD_REQUEST, INTERNAL_SERVER_ERROR, NOT_AUTHORIZED, OK, NO_CONTENT };
+module.exports = {
+    BAD_REQUEST,
+    INTERNAL_SERVER_ERROR,
+    NOT_AUTHORIZED,
+    OK, NO_CONTENT
+};

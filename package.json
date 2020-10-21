@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/TRGotfree/simple_crud#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "config": "^3.3.2",
     "express": "^4.17.1",
+    "hbs": "^4.1.1",
     "winston": "^3.3.3"
   }
 }

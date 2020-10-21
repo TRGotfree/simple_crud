@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple CRUD App</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" lang="ru" />
+    <script src="/jQuery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/bootstrap-4.3.1-dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/bootstrap-4.3.1-dist/js/popper.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="/style.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="/bootstrap-4.3.1-dist/css/bootstrap.min.css" charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        {{#if auth}}
+          {{>auth}}
+        {{/if}}
+        {{#if main}}
+          {{>main}}
+        {{/if}}
+    </main>
+    <footer>
+
+    </footer>
+    <script src="/script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
