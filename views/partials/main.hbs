@@ -1,0 +1,40 @@
+<div class="table-container">
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Заголовок записи</th>
+            <th>Описание</th>
+            <th>Редактировать</th>
+            <th>Удалить</th>
+        </thead>
+        <tbody>
+            {{#each records}}
+            <tr>
+                <td>
+                    {{this.id}}
+                </td>
+                <td>
+                    {{this.title}}
+                </td>
+                <td>
+                    {{this.description}}
+                </td>
+                <td>
+                    <button id={{this.id}}>Редактировать</button>
+                </td>
+                <td>
+                    <button id={{this.id}}>Удалить запись</button>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+<div class="form-container">
+    <form action="/records" method="POST">
+        <input type="text" name="title" required class="title-input"/>
+        <textarea rows="5" cols="3" name="description" required class="description-textarea"/>
+        <button type="submit">Сохранить</button>
+        <button type="reset">Очистить</button>
+    </form>
+</div>
