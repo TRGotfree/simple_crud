@@ -1,6 +1,9 @@
 class InMemoryRepository {
     __user = {};
-    __records = [];
+    __records = [
+        { id: 1, title: "Новость", description: "У Клары украли коллары!!!" },
+        { id: 2, title: "Погода", description: "Погодка сегодня отпад!" }
+    ];
 
     addRecord(record) {
         if (!record)
@@ -24,7 +27,7 @@ class InMemoryRepository {
         if (!this.__records || this.__records.length === 0)
             return 0;
 
-        return this.__records[this.__records.length - 1];
+        return this.__records[this.__records.length - 1].id;
     }
 
     updateRecord(id, record) {

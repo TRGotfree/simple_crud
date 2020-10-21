@@ -15,20 +15,13 @@
 </head>
 
 <body>
-  <header>
-
-  </header>
   <main>
-    {{#if auth}}
+    {{#if renderAuth}}
     {{>auth}}
-    {{/if}}
-    {{#if main}}
+    {{else}}
     {{>main}}
     {{/if}}
   </main>
-  <footer>
-
-  </footer>
   <script src="/script.js" type="text/javascript" charset="utf-8"></script>
 </body>
 

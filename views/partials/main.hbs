@@ -1,40 +1,46 @@
-<div class="table-container">
-    <table>
-        <thead>
-            <th>Id</th>
-            <th>Заголовок записи</th>
-            <th>Описание</th>
-            <th>Редактировать</th>
-            <th>Удалить</th>
-        </thead>
-        <tbody>
-            {{#each records}}
-            <tr>
-                <td>
-                    {{this.id}}
-                </td>
-                <td>
-                    {{this.title}}
-                </td>
-                <td>
-                    {{this.description}}
-                </td>
-                <td>
-                    <button id={{this.id}}>Редактировать</button>
-                </td>
-                <td>
-                    <button id={{this.id}}>Удалить запись</button>
-                </td>
-            </tr>
-            {{/each}}
-        </tbody>
-    </table>
-</div>
-<div class="form-container">
-    <form action="/records" method="POST">
-        <input type="text" name="title" required class="title-input"/>
-        <textarea rows="5" cols="3" name="description" required class="description-textarea"/>
-        <button type="submit">Сохранить</button>
-        <button type="reset">Очистить</button>
-    </form>
+<div class="records-container">
+    <div class="table-container table table-bordered table-hover">
+        <table>
+            <thead>
+                <th scope="col">Id</th>
+                <th scope="col">Заголовок записи</th>
+                <th scope="col">Описание</th>
+                <th scope="col">Редактировать</th>
+                <th scope="col">Удалить</th>
+            </thead>
+            <tbody>
+                {{#each records}}
+                <tr>
+                    <td>
+                        {{this.id}}
+                    </td>
+                    <td>
+                        {{this.title}}
+                    </td>
+                    <td>
+                        {{this.description}}
+                    </td>
+                    <td>
+                        <button class="edit-record btn btn-primary">Редактировать</button>
+                    </td>
+                    <td>
+                        <button class="delete-record btn btn-danger">Удалить запись</button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <div class="record-edit-container">
+        <form action="/records" method="POST" class="edit-record-form">
+            <p>Создание и редактирование записи</p>
+            <input hidden id="record-id-input" value="-1"/>
+            <input type="text" name="title" required id="record-title-input" class="title-input" placeholder="Введите заголовок записи"/>
+            <textarea rows="5" cols="12" name="description" required id="record-description-textarea" class="description-textarea" placeholder="Описание записи"></textarea>
+            <div class="actions-btn-container">
+                <button type="button" id="save-btn" class="btn btn-success">Сохранить</button>
+                <button type="reset" id="clear-btn" class="btn btn-danger">Очистить</button>
+            </div>
+        </form>
+    </div>
 </div>
